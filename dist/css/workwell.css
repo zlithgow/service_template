@@ -1,0 +1,1914 @@
+@font-face {
+    font-family: "workwell-font";
+    src: url("../fonts/workwell-font.eot");
+    src: url("../fonts/workwell-font.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/workwell-font.woff") format("woff"),
+    url("../fonts/workwell-font.ttf") format("truetype"),
+    url("../fonts/workwell-font.svg#workwell-font") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[data-icon]:before {
+    font-family: "workwell-font" !important;
+    content: attr(data-icon);
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "workwell-font" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron:before {
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+    transform: translateY(-50%) rotate(-45deg);
+    border-right: 2px solid #c7c7cc;
+    border-bottom: 2px solid #c7c7cc;
+    position: absolute;
+    content: '';
+    width: 7px;
+    height: 7px;
+    background-color: transparent;
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+    transform: translateY(-50%) rotate(-45deg);
+    right: 16px;
+    top: 50%;
+    z-index: 5;
+}
+
+/*.icon-chevron:before {
+    content: "\61";
+    color: #989898;
+}*/
+
+.icon-check:before {
+    content: "a";
+    color: #1c5094;
+    margin-right: -4px;
+}
+
+.icon-check--material:before {
+    content: "c";
+    color: #1f5295;
+    margin-right: -4px;
+}
+
+.icon-check-off--material:before {
+    content: "b";
+    color: #a8a8a8;
+    margin-right: -4px;
+}
+
+.icon-select:before {
+    content: "a";
+    color: #1c5094;
+    margin-right: -4px;
+}
+
+.icon-select--material:before {
+    content: "f";
+    color: #1f5295;
+    margin-right: -4px;
+}
+
+.icon-select-off--material:before {
+    content: "e";
+    color: #a8a8a8;
+    margin-right: -4px;
+}
+
+.icon-close--material:before {
+    content: "g";
+    color: #fff;
+    font-size: 25px;
+}
+
+.icon-clear:before {
+    content: "h";
+    color: #b5b5b5;
+    font-size: 14px;
+}
+
+.icon-search-input:before {
+    content: "i";
+    font-size: 25px;
+    color: black;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #fafafa;
+}
+
+/*~
+  name: List
+  category: List
+  elements: ww-list ww-list-item
+  markup: |
+    <ul class="ww-list">
+      <li class="ww-list-item">
+        <div class="ww-list-item__center">Dog</div>
+      </li>
+      <li class="ww-list-item">
+        <div class="ww-list-item__center">Cat</div>
+      </li>
+      <li class="ww-list-item">
+        <div class="ww-list-item__center">Hamster</div>
+      </li>
+    </ul>
+*/
+.ww-list {
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    background: transparent;
+    /*border: none;*/
+    line-height: normal;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: -apple-system, 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    list-style-type: none;
+    text-align: left;
+    display: block;
+    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+    /*border-top: solid 0.5px #ccc;*/
+    border-bottom: solid 0.5px #ccc;
+    background-image: -webkit-linear-gradient(#ccc, #ccc),
+    -webkit-linear-gradient(#ccc, #ccc);
+    background-image: linear-gradient(#ccc, #ccc),
+    linear-gradient(#ccc, #ccc);
+    background-size: 100% 0px, 100% 0px;
+    background-repeat: no-repeat;
+    background-position: bottom, top;
+    background-color: #fff;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* Non-prefixed version, currently
+                                     supported by Chrome and Opera */
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .ww-list {
+        background-image: -webkit-linear-gradient(bottom, #ccc, #ccc 50%, transparent 50%),
+        -webkit-linear-gradient(top, #ccc, #ccc 50%, transparent 50%);
+        background-image: linear-gradient(0deg, #ccc, #ccc 50%, transparent 50%),
+        linear-gradient(180deg, #ccc, #ccc 50%, transparent 50%);
+    }
+}
+
+.ww-list-item {
+    width: 100%;
+    position: relative;
+    list-style: none;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 0 0 14px;
+    margin: 0 0 -1px 0;
+    color: #1f1f21;
+    -webkit-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+}
+
+.ww-list-item__left {
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 12px 14px 12px 0;
+    -webkit-box-ordinal-group: 1;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    line-height: 1.2em;
+    min-height: 44px;
+}
+
+.ww-list-item__left:empty {
+    width: 0;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.ww-list-item__center {
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    margin-right: auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    margin-left: 0;
+    border-bottom: none;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: -webkit-linear-gradient(bottom, #ccc, #ccc 100%);
+    background-image: linear-gradient(0deg, #ccc, #ccc 100%);
+    padding: 12px 6px 12px 0;
+    line-height: 1.2em;
+    min-height: 44px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .ww-list-item__center {
+        background-image: -webkit-linear-gradient(bottom, #ccc, #ccc 50%, transparent 50%);
+        background-image: linear-gradient(0deg, #ccc, #ccc 50%, transparent 50%);
+    }
+}
+
+.ww-list-item__right {
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+    padding: 12px 12px 12px 0;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    border-bottom: none;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: -webkit-linear-gradient(bottom, #ccc, #ccc 100%);
+    background-image: linear-gradient(0deg, #ccc, #ccc 100%);
+    line-height: 1.2em;
+    min-height: 44px;
+    max-height: 44px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .ww-list-item__right {
+        background-image: -webkit-linear-gradient(bottom, #ccc, #ccc 50%, transparent 50%);
+        background-image: linear-gradient(0deg, #ccc, #ccc 50%, transparent 50%);
+    }
+}
+
+.ww-list-header {
+    margin: 0;
+    list-style: none;
+    text-align: left;
+    display: block;
+    box-sizing: border-box;
+    padding: 0 0 0 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #989898;
+    min-height: 24px;
+    line-height: 25px;
+    text-transform: uppercase;
+    position: relative;
+    border-bottom: solid 0.5px #ccc;
+    /*background-color: #efeff4;*/
+    background-color: #fafafa;
+    background-size: 100% 0px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-image: -webkit-linear-gradient(bottom, #ccc, #ccc 100%);
+    background-image: linear-gradient(0deg, #ccc, #ccc 100%);
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .ww-list-header {
+        background-image: -webkit-linear-gradient(top, #ccc, #ccc 50%, transparent 50%);
+        background-image: linear-gradient(180deg, #ccc, #ccc 50%, transparent 50%);
+    }
+}
+
+.ww-list-header--noborderbottom {
+    border-bottom: none;
+}
+
+/*~
+  name: Noborder List
+  category: List
+  elements: ww-list-item
+  markup: |
+    <ul class="ww-list ww-list--noborder">
+      <li class="ww-list-item ww-list-item--noborder">
+        <div class="ww-list-item__center">Item</div>
+      </li>
+      <li class="ww-list-item ww-list-item--noborder">
+        <div class="ww-list-item__center">Item</div>
+      </li>
+    </ul>
+ */
+.ww-list--noborder {
+    border-top: none;
+    border-bottom: none;
+    background-image: none;
+}
+
+.ww-list--nobordertop {
+    border-top: none;
+}
+
+.ww-list--nobordertop--material {
+    border-top: none;
+}
+
+/*~
+  name: Category List Header
+  category: List
+  elements: ww-list ww-list-header ww-list-item
+  markup: |
+    <ul class="ww-list">
+      <li class="ww-list-header">
+        Header
+      </li>
+      <li class="ww-list-item">
+        <div class="ww-list-item__center">Item</div>
+      </li>
+      <li class="ww-list-item">
+        <div class="ww-list-item__center">Item</div>
+      </li>
+      <li class="ww-list-item">
+        <div class="ww-list-item__center">Item</div>
+      </li>
+    </ul>
+ */
+/*~
+  name: Tappable List
+  category: List
+  elements: ww-list ww-list-item
+  markup: |
+    <ul class="ww-list">
+      <li class="ww-list-item ww-list-item--tappable">
+        <div class="ww-list-item__center">Tappable Item</div>
+      </li>
+      <li class="ww-list-item ww-list-item--tappable">
+        <div class="ww-list-item__center">Tappable Item</div>
+      </li>
+      <li class="ww-list-item ww-list-item--tappable">
+        <div class="ww-list-item__center">Tappable Item</div>
+      </li>
+    </ul>
+ */
+.ww-list-item--tappable:active {
+    -webkit-transition: none;
+    transition: none;
+    background-color: #d9d9d9;
+}
+
+/*~
+  name: Switch in List Item
+  category: List
+  elements: ww-list ww-list-item ww-switch
+  markup: |
+    <ul class="ww-list">
+      <li class="ww-list-item">
+        <div class="ww-list-item__center">
+          Label
+        </div>
+        <div class="ww-list-item__right">
+          <label class="ww-switch">
+            <input type="checkbox" class="ww-switch__input" checked>
+            <div class="ww-switch__toggle">
+              <div class="ww-switch__handle"></div>
+            </div>
+          </label>
+        </div>
+      </li>
+      <li class="ww-list-item">
+        <div class="ww-list-item__center">
+          Label
+        </div>
+        <div class="ww-list-item__right">
+          <label class="ww-switch">
+            <input type="checkbox" class="ww-switch__input">
+            <div class="ww-switch__toggle">
+              <div class="ww-switch__handle"></div>
+            </div>
+          </label>
+        </div>
+      </li>
+    </ul>
+*/
+/*~
+  name: List Item with Chevron
+  category: List
+  elements: ww-list ww-list-item
+  markup: |
+    <ul class="ww-list">
+      <li class="ww-list-item ww-list-item--chevron">
+        <div class="ww-list-item__center">Item A</div>
+      </li>
+      <li class="ww-list-item ww-list-item--chevron">
+        <div class="ww-list-item__center">Item B</div>
+      </li>
+    </ul>
+ */
+.ww-list-item--chevron:before {
+    border-right: 2px solid #c7c7cc;
+    border-bottom: 2px solid #c7c7cc;
+    position: absolute;
+    content: '';
+    width: 7px;
+    height: 7px;
+    background-color: transparent;
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+    transform: translateY(-50%) rotate(-45deg);
+    right: 16px;
+    top: 50%;
+    z-index: 5;
+
+}
+
+/*~
+  name: Inset List
+  category: List
+  elements: ww-list ww-list-item
+  markup: |
+    <ul class="ww-list ww-list--inset">
+      <li class="ww-list-item ww-list--inset__item ww-list-item--chevron ww-list-item--tappable">
+        <div class="ww-list-item__center">List Item with Chevron</div>
+      </li>
+      <li class="ww-list-item ww-list--inset__item ww-list-item--chevron ww-list-item--tappable">
+        <div class="ww-list-item__center">List Item with Chevron</div>
+      </li>
+    </ul>
+ */
+.ww-list--inset {
+    margin: 0 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-image: none;
+}
+
+/*~
+  name: Radio Button in List Item
+  category: List
+  elements: ww-list ww-list-item ww-input
+  markup: |
+    <ul class="ww-list">
+      <li class="ww-list-item ww-list-item--tappable">
+        <div class="ww-list-item__left">
+          <label class="ww-radio-button">
+            <input type="radio" id="r1" class="ww-radio-button__input" name="r" checked="checked">
+            <div class="ww-radio-button__checkmark"></div>
+          </label>
+        </div>
+        <label for="r1" class="ww-list-item__center">
+          Radio Button
+        </label>
+      </li>
+      <li class="ww-list-item ww-list-item--tappable">
+        <div class="ww-list-item__left">
+          <label class="ww-radio-button">
+            <input type="radio" id="r2" class="ww-radio-button__input" name="r">
+            <div class="ww-radio-button__checkmark"></div>
+          </label>
+        </div>
+        <label for="r2" class="ww-list-item__center">
+          Radio Button
+        </label>
+      </li>
+    </ul>
+*/
+/*~
+  name: Checkbox in List Item
+  category: List
+  elements: ww-list ww-list-item ww-input
+  markup: |
+    <ul class="ww-list">
+      <li class="ww-list-item ww-list-item--tappable">
+        <div class="ww-list-item__left">
+          <label class="ww-checkbox">
+            <input type="checkbox" id="checkbox1" class="ww-checkbox__input" name="c" checked="checked">
+            <div class="ww-checkbox__checkmark"></div>
+          </label>
+        </div>
+        <label for="checkbox1" class="ww-list-item__center">
+          Checkbox
+        </label>
+      </li>
+      <li class="ww-list-item ww-list-item--tappable">
+        <div class="ww-list-item__left">
+          <label class="ww-checkbox">
+            <input type="checkbox" id="checkbox2" class="ww-checkbox__input" name="c">
+            <div class="ww-checkbox__checkmark"></div>
+          </label>
+        </div>
+        <label for="checkbox2" class="ww-list-item__center">
+          Checkbox
+        </label>
+      </li>
+    </ul>
+*/
+/*~
+  name: No border Checkbox in List Item
+  category: List
+  elements: ww-list ww-list-item ww-input
+  markup: |
+    <ul class="ww-list">
+      <li class="ww-list-item ww-list-item--tappable">
+        <div class="ww-list-item__left">
+          <label class="ww-checkbox ww-checkbox--noborder">
+            <input id="s1" type="checkbox" class="ww-checkbox__input ww-checkbox--noborder__input">
+            <div class="ww-checkbox__checkmark ww-checkbox--noborder ww-checkbox--noborder__checkmark"></div>
+          </label>
+        </div>
+        <label for="s1" class="ww-list-item__center">
+          Checkbox
+        </label>
+      </li>
+      <li class="ww-list-item ww-list-item--tappable">
+        <div class="ww-list-item__left">
+          <label class="ww-checkbox ww-checkbox--noborder">
+            <input id="s2" type="checkbox" class="ww-checkbox__input ww-checkbox--noborder__input" checked>
+            <div class="ww-checkbox__checkmark ww-checkbox--noborder ww-checkbox--noborder__checkmark"></div>
+          </label>
+        </div>
+        <label for="s2" class="ww-list-item__center">
+          Checkbox
+        </label>
+      </li>
+    </ul>
+*/
+/*~
+  name: Text Input in List Item
+  category: List
+  elements: ww-list ww-list-item ww-input
+  markup: |
+    <ul class="ww-list">
+      <li class="ww-list-item">
+        <div class="ww-list-item__center">
+          <input type="text" class="ww-text-input" placeholder="Name">
+        </div>
+      </li>
+      <li class="ww-list-item">
+        <div class="ww-list-item__center">
+          <input type="text" class="ww-text-input" placeholder="Email">
+        </div>
+      </li>
+    </ul>
+*/
+/*~
+  name: Textarea in List Item
+  category: List
+  elements: ww-list ww-list-item
+  markup: |
+    <ul class="ww-list">
+      <li class="ww-list-item">
+        <div class="ww-list-item__center">
+          <textarea class="ww-textarea ww-textarea--transparent" placeholder="Text message"></textarea>
+        </div>
+      </li>
+    </ul>
+*/
+/*~
+  name: Right Label in List Item
+  category: List
+  elements: ww-list ww-list-item
+  markup: |
+    <ul class="ww-list">
+      <li class="ww-list-item">
+        <div class="ww-list-item__center">
+          Title
+        </div>
+        <div class="ww-list-item__right">
+          <div class="ww-list-item__label">Label</div>
+        </div>
+      </li>
+    </ul>
+*/
+.ww-list-item__label {
+    font-size: 14px;
+    /*padding: 0 4px;*/
+    color: #bebebe;
+}
+
+/*~
+  name: List Item with Subtitle
+  category: List
+  elements: ww-list ww-list-item
+  markup: |
+    <ul class="ww-list">
+      <li class="ww-list-item">
+        <div class="ww-list-item__center">
+          <div class="ww-list-item__title">
+            Title
+          </div>
+          <div class="ww-list-item__subtitle">
+            Subtitle
+          </div>
+        </div>
+      </li>
+    </ul>
+*/
+.ww-list-item__title {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    /*-ms-flex-item-align: end;
+    align-self: flex-end;*/
+    -webkit-box-ordinal-group: 1;
+    -ms-flex-order: 0;
+    order: 0;
+}
+
+.ww-list-item__subtitle {
+    opacity: 0.75;
+    font-size: 14px;
+    color: #989898;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+}
+
+/*~
+  name: List Item with Thumbnail
+  category: List
+  elements: ww-list ww-list-item
+  markup: |
+    <ul class="ww-list">
+      <li class="ww-list-item">
+        <div class="ww-list-item__left">
+          <img class="ww-list-item__thumbnail" src="http://placekitten.com/g/40/40" alt="Cute kitten">
+        </div>
+
+        <div class="ww-list-item__center">
+          <div class="ww-list-item__title">Lily</div>
+          <div class="ww-list-item__subtitle">Very friendly cat</div>
+        </div>
+      </li>
+
+      <li class="ww-list-item">
+        <div class="ww-list-item__left">
+          <img class="ww-list-item__thumbnail" src="http://placekitten.com/g/40/40" alt="Cute kitten">
+        </div>
+
+        <div class="ww-list-item__center">
+          <div class="ww-list-item__title">Molly</div>
+          <div class="ww-list-item__subtitle">Loves tuna!</div>
+        </div>
+      </li>
+    </ul>
+*/
+.ww-list-item__thumbnail {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    display: block;
+    margin: 0;
+}
+
+/*~
+  name: List Item with Icon
+  category: List
+  elements: ww-list ww-list-item
+  markup: |
+    <ul class="ww-list">
+      <li class="ww-list-item">
+        <div class="ww-list-item__left">
+          <img class="ww-list-item__thumbnail" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAIAAAADnC86AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wwJCB8v/9zErgAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAvSURBVFjD7c0BDQAACAMgtX+KJzWGm4MCdJK6MHVELBaLxWKxWCwWi8VisVj8MV7qBgI2A8rYpgAAAABJRU5ErkJggg==">
+        </div>
+
+        <div class="ww-list-item__center">
+          <div class="ww-list-item__title">Alice</div>
+          <div class="ww-list-item__subtitle">Description</div>
+        </div>
+
+        <div class="ww-list-item__right">
+          <i class="ww-ion-ios-information ww-list-item__icon"></i>
+        </div>
+      </li>
+
+      <li class="ww-list-item">
+        <div class="ww-list-item__left">
+          <img class="ww-list-item__thumbnail" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAIAAAADnC86AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wwJCB8v/9zErgAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAvSURBVFjD7c0BDQAACAMgtX+KJzWGm4MCdJK6MHVELBaLxWKxWCwWi8VisVj8MV7qBgI2A8rYpgAAAABJRU5ErkJggg==">
+        </div>
+
+        <div class="ww-list-item__center">
+          <div class="ww-list-item__title">Bob</div>
+          <div class="ww-list-item__subtitle">Description</div>
+        </div>
+
+        <div class="ww-list-item__right">
+          <i class="ww-ion-ios-information ww-list-item__icon"></i>
+        </div>
+      </li>
+    </ul>
+*/
+.ww-list-item__icon {
+    margin-left: 11px;
+    font-size: 22px;
+    padding: 0 6px;
+}
+
+/*~
+  name: Material List
+  category: List
+  elements: ww-list ww-list-item
+  markup: |
+    <ul class="ww-list ww-list--material">
+      <li class="ww-list-item ww-list-item--material">
+        <div class="ww-list-item__center ww-list-item--material__center">
+          <div class="ww-list-item__title ww-list-item--material__title">Orange</div>
+          <div class="ww-list-item__subtitle ww-list-item--material__subtitle">Sweet fruit that grows on trees.</div>
+        </div>
+      </li>
+      <li class="ww-list-item ww-list-item--material">
+        <div class="ww-list-item__center ww-list-item--material__center">
+          <div class="ww-list-item__title ww-list-item--material__title">Pear</div>
+          <div class="ww-list-item__subtitle ww-list-item--material__subtitle">Funny-shaped fruit.</div>
+        </div>
+      </li>
+    </ul>
+*/
+.ww-list--material {
+    font-family: 'Roboto', 'Noto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    background-image: none;
+}
+
+.ww-list-item--material {
+    border: 0;
+    padding: 0 0 0 16px;
+    line-height: normal;
+}
+
+.ww-list-item--material__subtitle {
+    margin-top: 4px;
+}
+
+.ww-list-item--material:first-child {
+    box-shadow: none;
+}
+
+.ww-list-item--material__left {
+    padding: 14px 0;
+    min-width: 56px;
+    line-height: 1;
+    min-height: 48px;
+}
+
+.ww-list-item--material__left:empty,
+.ww-list-item--material__center {
+    padding: 14px 6px 14px 0;
+    border-color: #eee;
+    border-bottom: none;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: -webkit-linear-gradient(bottom, #eee, #eee 100%);
+    background-image: linear-gradient(0deg, #eee, #eee 100%);
+    min-height: 48px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .ww-list-item--material__left:empty,
+    .ww-list-item--material__center {
+        background-image: -webkit-linear-gradient(bottom, #eee, #eee 50%, transparent 50%);
+        background-image: linear-gradient(0deg, #eee, #eee 50%, transparent 50%);
+    }
+}
+
+.ww-list-item--material__right {
+    padding: 12px 16px 12px 0;
+    line-height: 1;
+    border-color: #eee;
+    border-bottom: none;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: -webkit-linear-gradient(bottom, #eee, #eee 100%);
+    background-image: linear-gradient(0deg, #eee, #eee 100%);
+    min-height: 48px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .ww-list-item--material__right {
+        background-image: -webkit-linear-gradient(bottom, #eee, #eee 50%, transparent 50%);
+        background-image: linear-gradient(0deg, #eee, #eee 50%, transparent 50%);
+    }
+}
+
+.ww-list-item--material.list-item--longdivider {
+    border-bottom: 1px solid #eee;
+    border-bottom: none;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: -webkit-linear-gradient(bottom, #eee, #eee 100%);
+    background-image: linear-gradient(0deg, #eee, #eee 100%);
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .ww-list-item--material.list-item--longdivider {
+        background-image: -webkit-linear-gradient(bottom, #eee, #eee 50%, transparent 50%);
+        background-image: linear-gradient(0deg, #eee, #eee 50%, transparent 50%);
+    }
+}
+
+/*~
+  name: Material List with Header
+  category: List
+  elements: ww-list ww-list-item
+  markup: |
+    <ul class="ww-list ww-list--material">
+      <li class="ww-list-header ww-list-header--material">
+        Fruits
+      </li>
+      <li class="ww-list-item ww-list-item--material">
+        <div class="ww-list-item__center ww-list-item--material__center">
+          <div class="ww-list-item__title ww-list-item--material__title">Orange</div>
+          <div class="ww-list-item__subtitle ww-list-item--material__subtitle">Sweet fruit that grows on trees.</div>
+        </div>
+      </li>
+    </ul>
+*/
+.ww-list-header--material {
+    background: #fff;
+    border: none;
+    font-size: 14px;
+    text-transform: none;
+    margin: -1px 0 0 0;
+    color: #757575;
+    font-weight: 500;
+    padding: 8px 16px;
+}
+
+.ww-list-header--material:not(:first-of-type) {
+    border-top: none;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-image: -webkit-linear-gradient(top, #eee, #eee 100%);
+    background-image: linear-gradient(180deg, #eee, #eee 100%);
+    padding-top: 16px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .ww-list-header--material:not(:first-of-type) {
+        background-image: -webkit-linear-gradient(top, #eee, #eee 50%, transparent 50%);
+        background-image: linear-gradient(180deg, #eee, #eee 50%, transparent 50%);
+    }
+}
+
+/*~
+  name: Material List with Checkboxes
+  category: List
+  elements: ww-list ww-list-item ww-input
+  markup: |
+    <ul class="ww-list ww-list--material">
+      <li class="ww-list-item ww-list-item--material">
+        <div class="ww-list-item__left ww-list-item--material__left">
+          <label class="ww-checkbox ww-checkbox--material">
+            <input type="checkbox" id="checkbox3" class="ww-checkbox__input ww-checkbox--material__input">
+            <div class="ww-checkbox__checkmark ww-checkbox--material__checkmark"></div>
+          </label>
+        </div>
+
+        <label for="checkbox3" class="ww-list-item__center ww-list-item--material__center">
+          <div class="ww-list-item__title ww-list-item--material__title">Notifications</div>
+          <div class="ww-list-item__subtitle ww-list-item--material__subtitle">Allow notifications</div>
+        </label>
+      </li>
+
+      <li class="ww-list-item ww-list-item--material">
+        <div class="ww-list-item__left ww-list-item--material__left">
+          <label class="ww-checkbox ww-checkbox--material">
+            <input type="checkbox" id="checkbox4" class="ww-checkbox__input ww-checkbox--material__input" checked="checked">
+            <div class="ww-checkbox__checkmark ww-checkbox--material__checkmark"></div>
+          </label>
+        </div>
+
+        <label for="checkbox4" class="ww-list-item__center ww-list-item--material__center">
+          <div class="ww-list-item__title ww-list-item--material__title">Sound</div>
+          <div class="ww-list-item__subtitle ww-list-item--material__subtitle">Hangouts message</div>
+        </label>
+      </li>
+
+    </ul>
+*/
+/*~
+  name: Material List with Thumbnails
+  category: List
+  markup: |
+    <ul class="ww-list ww-list--material">
+      <li class="ww-list-item ww-list-item--material">
+        <div class="ww-list-item__left ww-list-item--material__left">
+          <img class="ww-list-item__thumbnail ww-list-item--material__thumbnail" src="http://placekitten.com/g/42/41" alt="Cute kitten">
+        </div>
+
+        <div class="ww-list-item__center ww-list-item--material__center">
+          <div class="ww-list-item__title ww-list-item--material__title">Lily</div>
+          <div class="ww-list-item__subtitle ww-list-item--material__subtitle">Very friendly cat</div>
+        </div>
+      </li>
+
+      <li class="ww-list-item ww-list-item--material">
+        <div class="ww-list-item__left ww-list-item--material__left">
+          <img class="ww-list-item__thumbnail ww-list-item--material__thumbnail" src="http://placekitten.com/g/40/40" alt="Cute kitten">
+        </div>
+
+        <div class="ww-list-item__center ww-list-item--material__center">
+          <div class="ww-list-item__title ww-list-item--material__title">Molly</div>
+          <div class="ww-list-item__subtitle ww-list-item--material__subtitle">Loves tuna!</div>
+        </div>
+      </li>
+
+    </ul>
+*/
+.ww-list-item--material__thumbnail {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+/*~
+  name: Material List with Icons
+  category: List
+  markup: |
+    <ul class="ww-list ww-list--material">
+      <li class="ww-list-item ww-list-item--material">
+        <div class="ww-list-item__left ww-list-item--material__left">
+          <img class="ww-list-item__thumbnail ww-list-item--material__thumbnail" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAIAAAADnC86AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wwJCB8v/9zErgAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAvSURBVFjD7c0BDQAACAMgtX+KJzWGm4MCdJK6MHVELBaLxWKxWCwWi8VisVj8MV7qBgI2A8rYpgAAAABJRU5ErkJggg==">
+        </div>
+
+        <div class="ww-list-item__center ww-list-item--material__center">
+          <div class="ww-list-item__title ww-list-item--material__title">Alice</div>
+          <div class="ww-list-item__subtitle ww-list-item--material__subtitle">Description</div>
+        </div>
+
+        <div class="ww-list-item__right ww-list-item--material__right">
+          <i style="color:#4db6ac" class="ww-list-item__icon ww-list-item--material__icon ww-zmdi ww-zmdi-comment"></i>
+        </div>
+      </li>
+
+      <li class="ww-list-item ww-list-item--material">
+        <div class="ww-list-item__left ww-list-item--material__left">
+          <img class="ww-list-item__thumbnail ww-list-item--material__thumbnail" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAIAAAADnC86AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wwJCB8v/9zErgAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAvSURBVFjD7c0BDQAACAMgtX+KJzWGm4MCdJK6MHVELBaLxWKxWCwWi8VisVj8MV7qBgI2A8rYpgAAAABJRU5ErkJggg==">
+        </div>
+
+        <div class="ww-list-item__center ww-list-item--material__center">
+          <div class="ww-list-item__title ww-list-item--material__title">Bob</div>
+          <div class="ww-list-item__subtitle ww-list-item--material__subtitle">Description</div>
+        </div>
+
+        <div class="ww-list-item__right ww-list-item--material__right">
+          <i style="color:#4db6ac" class="ww-list-item__icon ww-list-item--material__icon ww-zmdi ww-zmdi-comment"></i>
+        </div>
+      </li>
+    </ul>
+*/
+.ww-list-item--material__icon {
+    font-size: 20px;
+    padding: 0 4px;
+}
+
+/*~
+  name: List item without divider
+  category: List
+  markup: |
+    <ul class="ww-list">
+      <li class="ww-list-item ww-list-item--nodivider">
+        <div class="ww-list-item__center ww-list-item--nodivider__center">Item</div>
+      </li>
+      <li class="ww-list-item ww-list-item--nodivider">
+        <div class="ww-list-item__center ww-list-item--nodivider__center">Item</div>
+      </li>
+    </ul>
+ */
+.ww-list-item--nodivider__center,
+.ww-list-item--nodivider__right,
+.ww-list-item--nodivider:before {
+    border: none;
+    background-image: none;
+}
+
+/*~
+  name: List item with long divider
+  category: List
+  markup: |
+    <ul class="ww-list">
+      <li class="ww-list-item ww-list-item--longdivider">
+        <div class="ww-list-item__center ww-list-item--longdivider__center">Item</div>
+      </li>
+      <li class="ww-list-item ww-list-item--longdivider">
+        <div class="ww-list-item__center ww-list-item--longdivider__center">Item</div>
+      </li>
+    </ul>
+ */
+.ww-list-item--longdivider {
+    border-bottom: 1px solid #ccc;
+    border-bottom: none;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: -webkit-linear-gradient(bottom, #ccc, #ccc 100%);
+    background-image: linear-gradient(0deg, #ccc, #ccc 100%);
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .ww-list-item--longdivider {
+        background-image: -webkit-linear-gradient(bottom, #ccc, #ccc 50%, transparent 50%);
+        background-image: linear-gradient(0deg, #ccc, #ccc 50%, transparent 50%);
+    }
+}
+
+.ww-list-item--longdivider:last-of-type {
+    border: none;
+    background-image: none;
+}
+
+.ww-list-item--longdivider__center {
+    border: none;
+    background-image: none;
+}
+
+.ww-list-item--longdivider__right {
+    border: none;
+    background-image: none;
+}
+
+.ww-list-item--longdivider.list-item--chevron:before { /* FIXME */
+    border: none;
+    background-image: none;
+}
+
+/*~
+  name: List title
+  category: List
+  markup: |
+    <div class="ww-list-title">LIST TITLE</div>
+    <ul class="ww-list">
+      <li class="ww-list-item">
+        <div class="ww-list-item__center">Item</div>
+      </li>
+      <li class="ww-list-item">
+        <div class="ww-list-item__center">Item</div>
+      </li>
+    </ul>
+ */
+.ww-list-title {
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    background: transparent;
+    border: none;
+    line-height: normal;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: -apple-system, 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    display: block;
+    color: #6d6d72;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 0 0 0 16px;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+/*~
+  name: Material List Title
+  category: List
+  markup: |
+    <h3 class="ww-list-title ww-list-title--material">LIST TITLE</h3>
+    <ul class="ww-list ww-list--material">
+      <li class="ww-list-item ww-list-item--material">
+        <div class="ww-list-item__center ww-list-item--material__center">Item</div>
+      </li>
+      <li class="ww-list-item ww-list-item--material">
+        <div class="ww-list-item__center ww-list-item--material__center">Item</div>
+      </li>
+    </ul>
+ */
+.ww-list-title--material {
+    font-family: 'Roboto', 'Noto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    color: #757575;
+    font-size: 14px;
+    margin: 0;
+    padding: 12px 0 12px 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.badge-red-circle {
+    background-color: #da1e50;
+    border-radius: 50%;
+    height: 9px;
+    width: 9px;
+    margin-left: 9px;
+}
+
+.badge-green-circle {
+    background-color: #2ba451;
+    border-radius: 50%;
+    height: 9px;
+    width: 9px;
+    margin-left: 9px;
+}
+
+.badge-yellow-circle {
+    background-color: #fdaf2e;
+    border-radius: 50%;
+    height: 9px;
+    width: 9px;
+    margin-left: 9px;
+}
+
+.badge-default {
+    background-color: #DA1E50;
+    border-radius: 55px;
+    height: 21px;
+    width: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 13px;
+    margin-left: 9px;
+}
+
+.badge-default--material {
+    width: 21px;
+    height: 21px;
+    font-size: 12px;
+    border-radius: 50%;
+}
+
+.badge-default--material > :first-child {
+    margin-top: 1px;
+}
+
+.badge-red-circle:last-child {
+    margin-right: 3px;
+}
+
+.badge-yellow-circle:last-child {
+    margin-right: 3px;
+}
+
+.badge-green-circle:last-child {
+    margin-right: 3px;
+}
+
+.badge-default:last-child {
+    margin-right: 3px;
+}
+
+.ww-button {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    background-color: #FFFFFF;
+    color: #1f5295;
+    border: none;
+    border-top: 0.5px solid #d2d2d2;
+    border-bottom: 0.5px solid #d2d2d2;
+    line-height: normal;
+    font-family: -apple-system, 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    height: auto;
+    text-decoration: none;
+    padding: 4px 10px;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0;
+    vertical-align: middle;
+    -webkit-transition: none;
+    transition: none;
+    font-weight: 400;
+    line-height: 36px;
+    padding: 4px 12px;
+    width: 100%;
+    text-align: center;
+    display: block;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* Non-prefixed version, currently
+                                     supported by Chrome and Opera */
+}
+
+.ww-button-destructive {
+    color: #da1e50;
+}
+
+.ww-button--material {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    background: transparent;
+    border: none;
+    line-height: normal;
+    font-family: -apple-system, 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    height: auto;
+    text-decoration: none;
+    padding: 4px 10px;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0;
+    color: white;
+    vertical-align: middle;
+    background-color: #1f5295;
+    border: 0 solid currentColor;
+    border-radius: 3px;
+    -webkit-transition: none;
+    transition: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14),
+    0 1px 5px 0 rgba(0, 0, 0, .12),
+    0 3px 1px -2px rgba(0, 0, 0, .2);
+    font-family: 'Roboto', 'Noto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    min-height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    text-align: center;
+    font-size: 15px;
+    width: 94%;
+    margin-left: 3%;
+    border-radius: 2px;
+}
+
+.ww-button-destructive--material {
+    background-color: #c1362a;
+    color: black;
+}
+
+.ww-button:hover {
+    -webkit-transition: none;
+    transition: none;
+}
+
+.ww-button:focus {
+    outline: 0;
+}
+
+.ww-button:active {
+    color: #94B3D5;
+    -webkit-transition: none;
+    transition: none;
+}
+
+.ww-button-destructive:hover {
+    -webkit-transition: none;
+    transition: none;
+}
+
+.ww-button-destructive:focus {
+    outline: 0;
+}
+
+.ww-button-destructive:active {
+    color: #ff699b;
+    -webkit-transition: none;
+    transition: none;
+}
+
+.ww-button--material:active {
+    color: #fff;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14),
+    0 1px 18px 0 rgba(0, 0, 0, .12),
+    0 3px 5px -1px rgba(0, 0, 0, .4);
+    opacity: 0.9;
+    -webkit-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+}
+
+.ww-button-destructive--material:active {
+    color: black;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14),
+    0 1px 18px 0 rgba(0, 0, 0, .12),
+    0 3px 5px -1px rgba(0, 0, 0, .4);
+    opacity: 0.9;
+    -webkit-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+}
+
+.ww-button:disabled,
+.ww-button[disabled] {
+    color: #94B3D5;
+    cursor: default;
+    pointer-events: none;
+}
+
+.ww-button--material:disabled,
+.ww-button--material[disabled] {
+    -webkit-transition: none;
+    transition: none;
+    box-shadow: none;
+    background-color: rgba(79, 79, 79, .26);
+    color: rgba(0, 0, 0, .26);
+    opacity: 1;
+}
+
+.ww-input {
+    box-sizing: border-box;
+    font-family: -apple-system, 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    width: 100%;
+    border-top: 0.5px solid #d2d2d2;
+    border-bottom: 0.5px solid #d2d2d2;
+    border-left: none;
+    border-right: none;
+    /*padding: 0 0 0 14px;*/
+    margin: 0 0 -1px 0;
+    /*line-height: 14px;*/ /* avoid cutting the placeholder in safari */
+    border-radius: 0px !important;
+    color: #1f1f21;
+    outline: none;
+    padding: 12px 6px 12px 14px;
+    line-height: 1.2em;
+    min-height: 44px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.ww-input--material {
+    font-family: 'Roboto', 'Noto', sans-serif;
+}
+
+.ww-textarea {
+    box-sizing: border-box;
+    font-family: -apple-system, 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border-top: 0.5px solid #d2d2d2;
+    border-bottom: 0.5px solid #d2d2d2;
+    border-left: none;
+    border-right: none;
+    margin: 0 0 -1px 0;
+    font-weight: 400;
+    font-size: 16px;
+    color: #1f1f21;
+    width: 100%;
+    min-height: 80px;
+    border-radius: 0px !important;
+    outline: none;
+    /*padding: 12px 6px 12px 14px;*/
+    padding: 12px 6px 12px 12px;
+    line-height: 1.2em;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.ww-textarea--material {
+    font-family: 'Roboto', 'Noto', sans-serif;
+}
+
+.ww-textarea:disabled,
+.ww-textarea[disabled] {
+    -webkit-text-fill-color: #1f1f21;
+    background-color: white;
+    opacity: 1.0;
+    cursor: default;
+    pointer-events: none;
+}
+
+textarea {
+    /* Remove First */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    resize: none;
+}
+
+input[type=text] {
+    /* Remove First */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type=number] {
+    /* Remove First */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 17px;
+}
+
+.ww-switch {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.35s;
+    transition-duration: 0.35s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    box-shadow: inset 0 0 0 2px #e5e5e5;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    position: relative;
+    min-width: 51px;
+    font-size: 17px;
+    padding: 0 20px;
+    border: none;
+    overflow: visible;
+    width: 51px;
+    height: 32px;
+    z-index: 0;
+    text-align: left;
+}
+
+.ww-switch--material {
+    background-color: #b0afaf;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    bottom: 0px;
+    box-shadow: none;
+    color: rgb(31, 31, 33);
+    cursor: default;
+    display: block;
+    font-family: Roboto, Noto, sans-serif;
+    font-size: 17px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-weight: normal;
+    height: 14px;
+    left: 0px;
+    line-height: 17px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    /*margin-top: 5px;*/
+    position: relative;
+    padding: 0;
+    right: 0px;
+    text-align: left;
+    text-size-adjust: 100%;
+    top: 0px;
+    transition-duration: 0.35s;
+    transition-property: all;
+    transition-timing-function: ease-out;
+    user-select: none;
+    width: 36px;
+    min-width: 36px;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.ww-switch__handle-container {
+    box-sizing: border-box;
+    background-clip: padding-box;
+    position: absolute;
+    content: '';
+    border-radius: 28px;
+    height: 28px;
+    width: 28px;
+    background-color: white;
+    left: 1px;
+    top: 2px;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.35s;
+    transition-duration: 0.35s;
+    -webkit-transition-timing-function: cubic-bezier(.59, .01, .5, .99);
+    transition-timing-function: cubic-bezier(.59, .01, .5, .99);
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, .25), 0 3px 2px rgba(0, 0, 0, .25);
+}
+
+.ww-switch--material__handle-container {
+    height: 20px;
+    width: 20px;
+    /*margin-top: -5px;*/
+    box-sizing: border-box;
+    border-bottom-left-radius: 28px;
+    border-bottom-right-radius: 28px;
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+    position: relative;
+    left: 0px;
+    /*top: 2px;*/
+    top: -3px;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transition-duration: 0.35s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.59, 0.01, 0.5, 0.99);
+    user-select: none;
+}
+
+.ww-switch__handle-active-container {
+    -webkit-transition: none;
+    transition: none;
+}
+
+.ww-switch--material__handle-active-container {
+    -webkit-transition: none;
+    transition: none;
+}
+
+.ww-switch__handle-background {
+    background-color: transparent;
+    border-radius: 28px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transition-duration: 0.16s;
+    transition-property: all;
+}
+
+.ww-switch--material__handle-active-background {
+    box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.15);
+}
+
+.ww-switch__handle {
+    box-sizing: border-box;
+    border-radius: 28px;
+    height: 100%;
+    width: 100%;
+}
+
+.ww-switch--material__handle {
+    z-index: 1;
+    position: absolute;
+    background-color: rgb(241, 241, 241);
+    background-clip: padding-box;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 28px;
+    -webkit-box-direction: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transition-duration: 0.35s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.59, 0.01, 0.5, 0.99);
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px, rgba(0, 0, 0, 0.4) 0px 2px 4px -1px;
+}
+
+.ww-switch__handle-on {
+
+}
+
+.ww-switch--material__handle-on {
+    background-color: #1f5295;
+}
+
+.ww-switch__handle-container-on {
+    left: 21px;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, .25);
+}
+
+.ww-switch--material__handle-container-on {
+    left: 16px;
+}
+
+.ww-switch__handle-container-off {
+    left: 0px;
+}
+
+.ww-switch--material__handle-container-off {
+    left: 0px;
+}
+
+.ww-switch-on {
+    box-shadow: inset 0 0 0 2px #1f5295;
+    background-color: #1f5295;
+}
+
+.ww-switch-on--material {
+    box-shadow: none;
+    background-color: #94b3d5;
+}
+
+.ww-paging-indicator {
+    box-sizing: border-box;
+    padding: 10px;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.ww-paging-indicator__dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #d2d2d2;
+    margin-right: 8px;
+}
+
+.ww-paging-indicator__dot:last-child {
+    margin-right: 0px;
+}
+
+.ww-paging-indicator__dot[selected] {
+    background-color: #989898;
+}
+
+.ww-search-input-container {
+    background-color: white;
+    box-sizing: border-box;
+    border: solid #e5e6e8 1px;
+    border-radius: 5px;
+    width: 90%;
+    height: 44px;
+    margin-left: 5%;
+    box-shadow: 0px 1px 1px -1px rgba(0, 0, 0, 0.69);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.ww-search-input-container--material {
+
+}
+
+.ww-search-input {
+    width: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: -apple-system, 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2em;
+    padding-left: 6px;
+    padding-right: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ww-search-input--material {
+
+}
+
+.ww-search-input-icon-container {
+    padding: 7px;
+    margin-bottom: -7px;
+}
+
+.icon-search {
+    margin-top: 4px;
+}
+
+.icon-search:before {
+    font-size: 26px;
+    content: "b";
+    color: #a8a8a8;
+}
+
+.ww-search-view {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: #fafafa;
+    box-shadow: 0px -1px 2px -1px rgba(0, 0, 0, 0.75);
+    /*background-color:red;*/
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 100%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.ww-search-bar {
+    box-sizing: border-box;
+    background-color: #fff;
+    width: 100%;
+    height: 46px;
+    min-height: 46px;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+}
+
+.ww-search-bar--material {
+    background-color: #1f5295;
+    height: 64px;
+    min-height: 64px;
+    border-bottom: 2px solid #bbbbbb;
+    padding: 0;
+}
+
+.ww-search-bar-icon-container--material {
+    padding: 20px;
+}
+
+.ww-search-bar-input-container {
+    border-radius: 5px;
+    background-color: #e5e6e8;
+    min-width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 28px;
+}
+
+.ww-search-bar-input {
+    font-family: -apple-system, 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #e5e6e8;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    width: 100%;
+}
+
+.ww-search-bar-input--material {
+    font-family: 'Roboto', 'Noto', sans-serif;
+    background-color: #1f5295;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.ww-search-bar-input::-webkit-input-placeholder {
+    font-size: 14px;
+}
+
+.ww-search-bar-input--material::-webkit-input-placeholder {
+    color: #94b3d5;
+    font-size: 18px;
+}
+
+.ww-search-view-list-container {
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.ww-search-bar-search-icon-container {
+    margin-bottom: -6px;
+    padding-left: 7.5px;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+}
+
+.ww-search-bar-clear-icon-container {
+    margin-bottom: -4px;
+    padding: 7.5px 7.5px 7.5px 0;
+}
+
+.ww-search-bar-text-container {
+    display: inline-block;
+    flex-grow: 1;
+    max-width: 50%;
+    min-width: 60px;
+    padding: 11px 6px 11px 11px;
+    font-family: -apple-system, 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
+    font-size: 17px;
+    color: #1f5295;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.icon-search-input-small:before {
+    content: "i";
+    color: #b5b5b5;
+    font-size: 17px;
+}
